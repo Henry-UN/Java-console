@@ -1,18 +1,17 @@
-# install Java
-Install Java
+install docker 
 
-# install Maven
-sudo apt install maven
-
-# clone repository
+# Clone repository 
 git clone https://github.com/Henry-UN/Java-console.git
 
-# cd into application directory
-cd Java-console/demoapp
+# Switch to the docker branch
+cd Java-console
+git checkout docker
 
-# compile & package application 
-mvn compile
-mvn clean package
 
-# run application 
-java -jar target/demoapp-1.0-SNAPSHOT.jar
+# containarize application 
+docker build -t demoapp .
+
+# Run  Container
+docker run --name demoapp -d  demoapp
+docker logs demoapp
+
