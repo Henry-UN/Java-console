@@ -1,0 +1,18 @@
+# install Java
+Install Java
+
+# install Maven
+sudo apt install maven
+
+# clone repository
+git clone https://github.com/Henry-UN/Java-console.git
+
+# cd into application directory
+cd Java-console/demoapp
+
+# compile & package application 
+mvn compile
+mvn clean package
+
+# run application 
+java -jar target/demoapp-1.0-SNAPSHOT.jar
